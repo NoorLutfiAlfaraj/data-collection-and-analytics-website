@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Product Insights Data Collection Portal</title>
+    <style>
+        
+        .header {
+            background-color: rgb(208, 235, 244);
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+        }
+
+        .links a {
+            color: black;
+            padding: 0 15px;
+            text-decoration: none;
+        }
+
+        .links a:hover{
+            color: dodgerblue;
+        }
+
+        body{
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(208, 235, 244);
+        }
+
+        .container{
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        h2{
+         margin-top: 0;
+        }
+
+        p{
+         line-height: 1.5;
+        }
+
+        .notice{
+        background-color: #e8f4ff;
+        border-left: 4px solid #2196f3;
+        padding: 10px 12px;
+        margin-bottom: 20px;
+        font-size: 14px;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        label{
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input[type="email"],
+        select,
+        textarea{
+            padding: 8px 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .checkbox-row{
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 13px;
+        }
+
+          button {
+        margin-top: 10px;
+        padding: 10px 16px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+        background-color: #2196f3;
+        color: white;
+    }
+
+    button:hover {
+        background-color: #1976d2;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Customer Data</h1>
+
+        <div class="links">
+            <a href="index.html">Customer Registration</a>
+            <a href="feedback.html">Product Feedback</a>
+            <a href="dashboard.html">Data Analysis Dashboard</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Product Feedback</h2>
+        <p>
+            This page collects feedback about the product to understand satisfaction levels, 
+            usage patterns, and areas for improvement.
+        </p>
+        
+        <div class="notice">
+            <strong>Fairness & Accountability:</strong>All responses are treated equally and 
+            used only in aggregated form. No individual customer will be unfairly targeted or 
+            profiled based on this data.
+        </div>
+
+        <!-- Feedback form -->
+         
+         <form action="dashboard.html" method="get">
+            <br>
+            <div>
+                <label for="email">Email(optional)</label>
+                <input id="email" name="email" type="email" placeholder="Leave blank to stay anonymous">
+            </div>
+
+            <br>
+            <div>
+                <label for="product">Which product are you reviewing?</label>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Select Product</option>
+                    <option>Product A</option>
+                    <option>Product B</option>
+                    <option>Product C</option>
+                </select>
+            </div>
+
+            <br>
+            <div>
+                <label for="rating">Overall Rating</label>
+                <select id="rating" name="rating" required>
+                    <option value="" disabled selected>Select rating</option>
+                    <option>Dissatisfied</option>
+                    <option>Satisfied</option>
+                    <option>Very Satisfied</option>
+                </select>
+            </div>
+
+            <br>
+            <div>
+                <label for="frequency">Purchase Frequency</label>
+                <select id="frequency" name="frequency" required>
+                    <option value="" disabled selected>Select frequency</option>
+                    <option>First time</option>
+                    <option>Weekly</option>
+                    <option>Monthly</option>
+                </select>
+            </div>
+            
+            <br>
+            <div>
+                <label for="feedback">Feedback / Comments</label>
+                <textarea id="'feedback" name="feedback" placeholder="Write your feedback here..."></textarea>
+            </div>
+
+            <br>
+            <div class="checkbox-row">
+                <input id="consent-feedback" type="checkbox" required>
+                <label for="consent-feedback">
+                     I agree that my feedback may be used in anonymized form for analysis and 
+                    production planning, in line with the project's ethical data policy.
+                </label>
+            </div>
+
+            <br>
+            <div>
+                <button type="submit">Submit Feedback</button>
+            </div>
+
+         </form>
+    </div>
+</body>
+</html>
