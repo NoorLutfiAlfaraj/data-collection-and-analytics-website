@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Insights Data Collection Portal</title>
+    <style>
+    .header {
+        background-color: rgb(208, 235, 244);
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 50px;
+    }
+
+    .links a {
+        color: black;
+        padding: 0 15px;
+        text-decoration: none;
+    }
+
+    .links a:hover{
+        color: dodgerblue;
+    }
+    
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: rgb(208, 235, 244);
+    }
+
+    .container{
+        max-width: 800px;
+        margin: 50px auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    h2{
+        margin-top: 0;
+    }
+
+    p{
+        line-height: 1.5;
+    }
+
+    .notice {
+        background-color: #e8f4ff;
+        border-left: 4px solid #2196f3;
+        padding: 10px 12px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    label {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select{
+        padding: 8px 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .checkbox-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        font-size: 13px;
+    }
+
+    button {
+        margin-top: 10px;
+        padding: 10px 16px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+        background-color: #2196f3;
+        color: white;
+    }
+
+    button:hover {
+        background-color: #1976d2;
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Customer Data</h1>
+        <div class="links">
+            <a href="index.html">Customer Registration</a>
+            <a href="feedback.html">Product Feedback</a>
+            <a href="dashboard.html">Data Analysis Dashboard</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Customer Registration</h2>
+        <p>
+            This page collects basic customer information that will later be used for 
+            analyzing customer profiles and supporting production planning decisions.
+        </p>
+
+        <div class="notice">
+            <strong>Transparency & Privacy:</strong>We handle your data with care. Only essential information is collected, protected, and used solely for research purposes. Your data will remain confidential.
+        </div>
+
+        <form action="feedback.html" method="get">
+            <br>
+            <div>
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" placeholder="full name" required>
+            </div>
+
+            <br>
+            <div>
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="email" placeholder="n223@gmail.com" required>
+            </div>
+
+            <br>
+            <div>
+                <label for="age">Age</label>
+                <input id="age" name="age" type="number" min="15" max="100" placeholder="Age" required>
+            </div>
+
+            <br>
+            <div>
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Prefer not to say</option>
+                </select>
+            </div>
+
+            <br>
+            <div>
+                <label for="country">Country / Region</label>
+                <select id="country" name="country" required>
+                    <option value="" disabled selected>Select Country</option>
+                    <option>KSA</option>
+                    <option>USA</option>
+                    <option>UK</option>
+                    <option>Middle East (other)</option>
+                    <option>other</option>
+                </select>
+            </div>
+
+            <br>
+            <div>
+                <label for="product">Product of Interest</label>
+                <select id="product" name="product" required>
+                    <option valu="" disabled selected>Select Product</option>
+                    <option>Product A</option>
+                    <option>Product B</option>
+                    <option>Product C</option>
+                </select>
+            </div>
+
+            <br>
+            <div class="checkbox-row">
+                <input id="consent" type="checkbox" required>
+                <label for="consent">
+                    I understand that my data will be collected and analyzed for production
+                    planning purposes only, and I consent to its ethical use according to the 
+                    privacy notice.
+                </label>
+            </div>
+
+            <br>
+            <button type="submit">Register</button>
+
+        </form>
+
+    </div>
+</body>
+</html>
