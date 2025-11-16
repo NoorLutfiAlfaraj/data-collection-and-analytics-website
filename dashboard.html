@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Product Insights Data Collection Portal</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(208, 235, 244);
+        }
+
+        .header {
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+        }
+
+        .links a {
+            color: black;
+            padding: 0 15px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .links a:hover{
+            color: dodgerblue;
+        }
+
+        .container{
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        h2, h3 {
+            margin-top: 0;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        .notice {
+            background-color: #e8f4ff;
+            border-left: 4px solid #2196f3;
+            padding: 10px 12px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 14px;
+        }  
+
+        th,td{
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        .chart-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .chart-label {
+            width: 120px;
+            font-size: 13px;
+        }
+
+        .chart-bar {
+            height: 10px;
+            border-radius: 5px;
+            background-color: #90caf9;
+        }   
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Customer Data</h1>
+
+        <div class="links">
+            <a href="index.html">Customer Registration</a>
+            <a href="feedback.html">Product Feedback</a>
+            <a href="dashboard.html">Data Analysis Dashboard</a>
+        </div>
+    </div> 
+
+
+    <div class="container">
+        <h2>Data Analysis Dashboard</h2>
+
+        <p>
+            This dashboard illustrates how collected customer data can be summarized and visualized 
+            to support future production planning. The values below are sample data for the report.
+        </p>
+
+        <div class="notice">
+            <strong>Transparency & Accountability:</strong> Only aggregated data is shown here. 
+            Individual customer identities are not displayed. In a real system, access to 
+            detailed records would be restricted to authorized staff to protect privacy.
+        </div>
+
+        <h3>Customer Data Table</h3>
+        <table>
+            <tr>
+                <th>Customer ID</th>
+                <th>Product</th>
+                <th>Country / Rating</th>
+                <th>Purchase Frequency</th>
+                <th>Region</th>
+            </tr>
+
+            <tr>
+                <td>c001</td>
+                <td>A</td>
+                <td>Dissatisfied</td>
+                <td>First time</td>
+                <td>KSA</td>
+            </tr>
+
+            <tr>
+                <td>c002</td>
+                <td>B</td>
+                <td>Satisfied</td>
+                <td>Monthly</td>
+                <td>USA</td>
+            </tr>
+
+            <tr>
+                <td>c003</td>
+                <td>C</td>
+                <td>Very Satisfied</td>
+                <td>Weekly</td>
+                <td>UK</td>
+            </tr>
+        </table>
+
+        <br>
+        <h3>Product Popularity</h3>
+        <div class="chart-row">
+            <div class="chart-label">Product A</div>
+            <div class="chart-bar" style="width: 70%;"></div>
+        </div>
+
+        <div class="chart-row">
+            <div class="chart-label">Product B</div>
+            <div class="chart-bar" style="width: 40%;"></div>
+        </div>
+
+        <div class="chart-row">
+            <div class="chart-label">Product C</div>
+            <div class="chart-bar" style="width: 20%;"></div>
+        </div>
+
+        <p>
+            <strong>Product A</strong> appears to be the most preferred, 
+            so production planning may prioritize it. At the same time, ethical principles are 
+            applied by using only aggregated, non-identifiable data in decision-making.
+        </p>
+    </div>
+
+</body>
+</html>
